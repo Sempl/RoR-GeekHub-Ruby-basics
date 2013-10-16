@@ -1,4 +1,4 @@
-seconds_in_year = 365*24*360
+seconds_in_year = 365*24*3600
 puts 'skol\'ko sekynd prozhul chelovek?'
 seconds = gets.chomp
 norm_year = seconds.to_i/seconds_in_year
@@ -14,7 +14,7 @@ while year_begin != year_now
   end
  year_begin+=1
 end
-full_days = norm_year*365+days_plus
+full_days = seconds.to_i/(24*3600)+days_plus
 full_year = full_days/365
-full_months = full_year*12
+full_months = full_days/30
 puts 'etot chelovek prozhul ' +full_year.to_s+' let, ' +full_months.to_s+ ' mesyacev i ' +full_days.to_s+' dnei'
